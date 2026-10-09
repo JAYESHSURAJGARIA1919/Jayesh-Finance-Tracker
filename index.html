@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <section id="dashboard" class="screen active">
+      <header class="header">
+        <p class="month">OCTOBER 2026</p>
+        <h1>My Money</h1>
+      </header>
+
+      <div class="balance-card">
+        <p class="label">Total balance</p>
+        <p class="balance" id="balance">₹ 12,450</p>
+        <div class="actions">
+          <button class="btn credit" id="creditBtn">+ Credit</button>
+          <button class="btn debit" id="debitBtn">− Debit</button>
+        </div>
+      </div>
+
+      <div class="summary">
+        <div class="summary-card">
+          <p class="label">Income this month</p>
+          <p class="amount green" id="income">₹ 30,000</p>
+        </div>
+        <div class="summary-card">
+          <p class="label">Spent this month</p>
+          <p class="amount red" id="expense">₹ 17,550</p>
+        </div>
+      </div>
+
+      <h2 class="section-title">Recent entries</h2>
+      <ul class="entries" id="entryList">
+        <li class="entry">
+          <div>
+            <p class="entry-title">To Lunch</p>
+            <p class="entry-meta">Food · 9 Oct</p>
+          </div>
+          <span class="red">− ₹200</span>
+        </li>
+        <li class="entry">
+          <div>
+            <p class="entry-title">By Pocket money</p>
+            <p class="entry-meta">Income · 8 Oct</p>
+          </div>
+          <span class="green">+ ₹5,000</span>
+        </li>
+        <li class="entry">
+          <div>
+            <p class="entry-title">To Auto fare</p>
+            <p class="entry-meta">Travel · 7 Oct</p>
+          </div>
+          <span class="red">− ₹60</span>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="nav">
+      <button class="nav-btn active">Dashboard</button>
+      <button class="nav-btn">Journal</button>
+      <button class="nav-btn">Ledger</button>
+    </nav>
+
+  </main>
+</body>
+</html>
