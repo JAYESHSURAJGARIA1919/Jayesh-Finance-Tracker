@@ -1,8 +1,4 @@
-* {
-     box-sizing: border-box;
-      margin: 0; 
-      padding: 0;
-     }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --bg: #0F1720;
@@ -33,30 +29,16 @@ body {
 .screen { display: none; flex-direction: column; gap: 18px; }
 .screen.active { display: flex; }
 
-.month {
-     font-size: 12px;
-      letter-spacing: 0.1em;
-       color: var(--muted); 
-    }
-h1 { font-size: 26px;
-     font-weight: 700;
-      margin-top: 4px; 
-    }
+.month { font-size: 12px; letter-spacing: 0.1em; color: var(--muted); }
+h1 { font-size: 26px; font-weight: 700; margin-top: 4px; }
 
 .balance-card {
   background: var(--card);
   border-radius: 20px;
   padding: 22px;
 }
-.label {
-     font-size: 13px;
-      color: var(--muted);
-     }
-.balance { 
-    font-size: 40px;
-     font-weight: 700; 
-     margin-top: 4px; 
-    }
+.label { font-size: 13px; color: var(--muted); }
+.balance { font-size: 40px; font-weight: 700; margin-top: 4px; }
 
 .actions { display: flex; gap: 12px; margin-top: 18px; }
 .btn {
@@ -71,9 +53,7 @@ h1 { font-size: 26px;
 .btn.credit { background: var(--green); }
 .btn.debit { background: var(--red); }
 
-.summary { display: flex;
-     gap: 12px;
-     }
+.summary { display: flex; gap: 12px; }
 .summary-card {
   flex: 1;
   background: var(--card);
@@ -120,3 +100,91 @@ h1 { font-size: 26px;
   cursor: pointer;
 }
 .nav-btn.active { background: var(--active); color: #fff; font-weight: 700; }
+
+/* Popup */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.modal[hidden] { display: none; }
+
+.sheet {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border-radius: 28px 28px 0 0;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sheet h2 { font-size: 20px; }
+.sheet label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.sheet input, .sheet select {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--active);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  font: 500 16px 'DM Sans', system-ui, sans-serif;
+}
+.btn.save { flex: none; height: 52px; background: var(--green); }
+.btn.save.is-debit { background: var(--red); }
+.cancel {
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 500 14px 'DM Sans', system-ui, sans-serif;
+  cursor: pointer;
+}
+
+/* Empty states */
+.empty {
+  list-style: none;
+  padding: 18px 14px;
+  border: 1px dashed var(--active);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Spending by category */
+.categories {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.categories .empty { border: 0; padding: 6px 0; }
+.cat-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.cat-track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.cat-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--red);
+}
