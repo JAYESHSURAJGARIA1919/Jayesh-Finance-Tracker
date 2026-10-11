@@ -8,11 +8,11 @@ function saveEntries() {
 }
 
 // ---------- Elements ----------
-const balanceEl = document.getElementById("balance");
-const incomeEl = document.getElementById("income");
-const expenseEl = document.getElementById("expense");
-const listEl = document.getElementById("entryList");
-const categoriesEl = document.getElementById("categories");
+const balanceEl = document.querySelector("#balance");
+const incomeEl = document.querySelector("#income");
+const expenseEl = document.querySelector("#expense");
+const listEl = document.querySelector("#entryList");
+const categoriesEl = document.querySelector("#categories");
 
 const modal = document.getElementById("modal");
 const form = document.getElementById("entryForm");
